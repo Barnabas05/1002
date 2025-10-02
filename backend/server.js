@@ -25,10 +25,10 @@ app.get("/energy_drinks", async (req, res) => {
 app.post("/energy_drinks", async (req, res) => {
    const { name, brand, caffeine, sugar_free } = req.body;
     let errors = [];
-    if(!name) errors.push("A name mező megadása kötelező");
-    if(!brand) errors.push("A brand mező megadása kötelező");
-    if(caffeine === undefined) errors.push("A caffeine mező megadása kötelező");
-    if(sugar_free === undefined) errors.push("A sugar_free mező megadása kötelező");
+    if(!name) errors.push({name : "A name mező megadása kötelező"});
+    if(!brand) errors.push({ brand: "A brand mező megadása kötelező"});
+    if(caffeine === undefined) errors.push({ caffeine: "A caffeine mező megadása kötelező"});
+    if(sugar_free === undefined) errors.push({ sugar_free: "A sugar_free mező megadása kötelező"});
     if(errors.length > 0){
         console.error("Validation errors:", errors);
         return res.status(400).json({ errors });
