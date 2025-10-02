@@ -68,7 +68,7 @@ Ez a projekt egy modern, RESTful API backend alkalmazás energiaitalok kezelés�
 
 1. **Repository klónozása**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Barnabas05/1002
    cd backend
    ```
 
